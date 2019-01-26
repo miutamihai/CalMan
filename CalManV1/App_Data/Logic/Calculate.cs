@@ -43,12 +43,12 @@ namespace Logic
             double calories = storage.GetCalories(ID, 100);
             int multiplier = Substract(ID, calories);
             if (multiplier == -1) return "";
-            result = System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + " ";
+            result = System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + "\n";
             ID = GetID();
             calories = storage.GetCalories(ID, 50);
             multiplier = Substract(ID, calories);
             if (multiplier == -1) return result;
-            result += System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + " ";
+            result += System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + "\n";
             ID = GetID();
             calories = storage.GetCalories(ID, 10);
             multiplier = Substract(ID, calories);
