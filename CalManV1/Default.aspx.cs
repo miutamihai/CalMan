@@ -18,8 +18,11 @@ namespace CalManV1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (TextBox1.Text == "") return;
+            BulletedList1.Items.Clear();
             logic.SetInput(System.Convert.ToDouble(TextBox1.Text));
-            Label1.Text = logic.Result();
+            logic.Result(BulletedList1);
+            
         }
     }
 }
