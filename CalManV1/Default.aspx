@@ -15,10 +15,13 @@
         <asp:RangeValidator runat="server" Type="Double"
             MinimumValue="1500" MaximumValue="20000" ControlToValidate="TextBox1"
             ErrorMessage="Values must be between 1500 and 20.000 calories" />
-        <asp:Label ID="Label1" runat="server" Style="top: 414px; left: 700px"></asp:Label>
+        
     </div>
     <div>
         <asp:Button ID="Button1" runat="server" Text="Calculate" OnClick="Button1_Click" />
+
+        <asp:BulletedList ID="BulletedList1" runat="server">
+        </asp:BulletedList>
 
     </div>
     <div aria-flowto="right">

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI.WebControls;
 using Resources;
 
 namespace Logic
@@ -35,25 +36,28 @@ namespace Logic
             }
             return ct;
         }
-        public string Result()
+        public void Result(BulletedList list)
         {
-
+            
             int ID = GetID();
             string result;
             double calories = storage.GetCalories(ID, 100);
             int multiplier = Substract(ID, calories);
-            if (multiplier == -1) return "";
+            if (multiplier == -1) return;
             result = System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + "\n";
+            list.Items.Add(new ListItem(result));
             ID = GetID();
             calories = storage.GetCalories(ID, 50);
             multiplier = Substract(ID, calories);
-            if (multiplier == -1) return result;
-            result += System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + "\n";
+            if (multiplier == -1) return;
+            result = System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID) + "\n";
+            list.Items.Add(new ListItem(result));
             ID = GetID();
             calories = storage.GetCalories(ID, 10);
             multiplier = Substract(ID, calories);
-            if (multiplier == -1) return result;
-            return result + System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID);
+            if (multiplier == -1) return;
+            result = System.Convert.ToString(calories * multiplier) + "g " + storage.GetName(ID);
+            list.Items.Add(new ListItem(result));
 
         }
     }
