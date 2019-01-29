@@ -13,7 +13,7 @@
     <div>
         <asp:TextBox ID="TextBox1" runat="server" CssClass="center" Width="150px"></asp:TextBox>
         <asp:RangeValidator runat="server" Type="Double"
-            MinimumValue="1500" MaximumValue="20000" ControlToValidate="TextBox1"
+            MinimumValue="1000" MaximumValue="20000" ControlToValidate="TextBox1"
             ErrorMessage="Values must be between 1500 and 20.000 calories" />
         
     </div>

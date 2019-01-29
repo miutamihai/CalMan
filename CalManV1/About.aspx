@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3>Description:</h3>
-    <p>CalMan (short for "Calories, Man!") is a free online calory calculation service, provided to you by the CalMan Team.</p>
+    <p>CalMan (short for "Calories, Man!") is a free online calorie calculation service, provided to you by the CalMan Team.</p>
     <div class ="text-center">
         <hr />
         <h3 class="display-4">
